@@ -1,0 +1,16 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 69" width="70" height="69">
+	<title>Home</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="Home">
+		<g id="About Section">
+			<g id="Partnerships section">
+				<g id="partnership logos">
+					<path id="Ellipse 1" class="shp0" d="M35.5 0C54.55 0 70 15.45 70 34.5C70 53.55 54.55 69 35.5 69C16.45 69 1 53.55 1 34.5C1 15.45 16.45 0 35.5 0Z" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
