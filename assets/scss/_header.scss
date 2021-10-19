@@ -12,6 +12,10 @@ header {
     display: flex;
     align-items: center;
     .header-menu {
+            opacity: 0;
+      transform: translate(0,30px);
+      transition: 0.5s all 0.5s;
+
       ul {
         display: flex;
         justify-content: flex-start;
@@ -37,6 +41,9 @@ header {
       flex: 0 0 48%;
     }
     .header-logo {
+      opacity: 0;
+      transform: translate(0,30px);
+      transition: 0.5s all 0.5s;
       a {
         display: block;
         width: 77px;
@@ -47,6 +54,13 @@ header {
           height: auto;
         }
       }
+    }
+  }
+  &.init{
+    .header-logo,
+    .header-container .header-menu{
+      opacity: 1;
+      transform: translate(0,0);
     }
   }
 }
