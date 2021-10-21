@@ -380,6 +380,7 @@
         margin: 15px 0 8px 0;
         letter-spacing: 4px;
         overflow: hidden;
+        padding: 5px 0;
         span{
           transform: translateY(-140%);
           display: block;
@@ -537,7 +538,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 910px;
+      width: 900px;
       height: 600px;
       z-index: 1;
     }
