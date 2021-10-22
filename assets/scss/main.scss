@@ -5,6 +5,15 @@ $red: #ca0813;
 * {
   box-sizing: border-box;
 }
+.vertical-line{
+  width: 1px;
+  background: #222;
+  &.full{
+    height: 100%;
+  }
+  bottom: 0;
+  position: absolute;
+}
 body {
   margin: 0;
   padding: $header-height 0 0 0;
