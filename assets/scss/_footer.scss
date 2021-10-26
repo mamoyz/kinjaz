@@ -1,19 +1,18 @@
 footer {
   padding: 145px 0 94px;
   position: relative;
-  .vertical-line{
-    &:nth-child(1){
+  .vertical-line {
+    &:nth-child(1) {
       left: 138px;
       height: 405px;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       left: 825px;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       left: 1105px;
     }
-    &:nth-child(4){
-
+    &:nth-child(4) {
       left: 1587px;
     }
   }

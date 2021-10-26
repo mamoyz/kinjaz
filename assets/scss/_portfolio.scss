@@ -1,0 +1,302 @@
+.portfolio-layout {
+  background-size: 100% auto;
+  position: relative;
+  background-repeat: no-repeat;
+  .vertical-title {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 174px;
+    line-height: 167px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 900;
+    -ms-writing-mode: tb-rl;
+    writing-mode: tb-rl;
+    text-align: right;
+    white-space: nowrap;
+    letter-spacing: 5px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    transform: rotate(-180deg);
+    z-index: 5;
+    top: 333px;
+    left: 104px;
+    span {
+      display: block;
+    }
+  }
+}
+.portfolio-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-bottom: 475px;
+}
+.portfolio-item {
+  overflow: hidden;
+  h1 {
+    font-family: $font;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    font-size: 100px;
+    margin: 40px 0 65px;
+    position: relative;
+  }
+  .item-container {
+    width: 100%;
+    padding-left: 340px;
+    padding-right: 240px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .item-content {
+    color: #fff;
+    h2 {
+      font-family: $font-condensed;
+      font-weight: 900;
+      font-size: 67px;
+      letter-spacing: 7px;
+      color: #fff;
+      margin: 20px 0 50px;
+    }
+    h3 {
+      color: $red;
+      font-family: $font-condensed;
+      font-weight: 400;
+      font-size: 33px;
+      margin: 0;
+    }
+  }
+  &:nth-child(5n + 1) {
+    .item-img {
+      position: relative;
+      padding-top: 150px;
+      &::before {
+        content: " ";
+        position: absolute;
+        background: $red;
+        width: 900px;
+        height: 100%;
+        top: 0;
+        right: 0;
+      }
+      img {
+        width: 561px;
+        height: auto;
+        padding-bottom: 175px;
+        position: relative;
+      }
+    }
+    .item-content {
+      padding: 287px 100px 0 104px;
+    }
+  }
+  &:nth-child(5n + 2) {
+    .item-container {
+      flex-direction: row-reverse;
+      .item-content {
+        padding-top: 98px;
+        padding-right: 40px;
+      }
+      .item-img {
+        img {
+          width: 777px;
+          position: relative;
+          top: -48px;
+        }
+      }
+    }
+  }
+  &:nth-child(5n + 3) {
+    .item-container {
+      //   flex-direction: row-reverse;
+      padding-bottom: 190px;
+      .item-content {
+        text-align: right;
+        padding-top: 195px;
+        padding-left: 10px;
+      }
+      .item-img {
+        padding-top: 27px;
+        img {
+          position: relative;
+          left: -117px;
+          width: 795px;
+        }
+      }
+    }
+  }
+  &:nth-child(5n + 4) {
+    width: 900px;
+    display: inline-block;
+    .item-container {
+      flex-direction: column;
+      padding-right: 0;
+      .item-content {
+        padding-top: 0;
+      }
+      .item-img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &:nth-child(5n + 5) {
+    width: calc(100% - 905px);
+    display: inline-block;
+    position: relative;
+    padding-bottom: 66px;
+    &:before {
+      content: " ";
+      position: absolute;
+      background: $red;
+      top: 0;
+      left: 113px;
+      width: 100%;
+      height: 720px;
+    }
+    .item-container {
+      flex-direction: column;
+      padding-right: 240px;
+      padding-left: 113px;
+      //   padding-top: 0;
+      .item-content {
+        //   padding-top: 52px;
+        padding-top: 13px;
+        padding-right: 90px;
+        position: relative;
+        h3 {
+          color: #000;
+        }
+      }
+      .item-img {
+        padding-top: 209px;
+        position: relative;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .portfolio-layout {
+    .vertical-title {
+      font-size: 9.06vw;
+      line-height: 8.7vw;
+      letter-spacing: 0.26vw;
+      -webkit-text-stroke-width: 0.1vw;
+      top: 17.34vw;
+      left: 5.42vw;
+      span {
+      }
+    }
+  }
+  .portfolio-items-container {
+  }
+  .portfolio-item {
+    h1 {
+      -webkit-text-stroke-width: 0.1vw;
+      font-size: 5.21vw;
+      margin: 2.08vw 0 3.39vw;
+    }
+    .item-container {
+      padding-left: 17.71vw;
+      padding-right: 12.5vw;
+    }
+    .item-content {
+      h2 {
+        font-size: 3.49vw;
+        letter-spacing: 0.36vw;
+        margin: 1.04vw 0 2.6vw;
+      }
+      h3 {
+        font-size: 1.72vw;
+      }
+    }
+    &:nth-child(5n + 1) {
+      .item-img {
+        padding-top: 7.81vw;
+        &::before {
+          width: 46.88vw;
+        }
+        img {
+          width: 29.22vw;
+          padding-bottom: 9.11vw;
+        }
+      }
+      .item-content {
+        padding: 14.95vw 5.21vw 0 5.42vw;
+      }
+    }
+    &:nth-child(5n + 2) {
+      .item-container {
+        .item-content {
+          padding-top: 5.1vw;
+          padding-right: 2.08vw;
+        }
+        .item-img {
+          img {
+            width: 40.47vw;
+            top: -2.5vw;
+          }
+        }
+      }
+    }
+    &:nth-child(5n + 3) {
+      .item-container {
+        padding-bottom: 9.9vw;
+        .item-content {
+          padding-top: 10.16vw;
+          padding-left: 0.52vw;
+        }
+        .item-img {
+          padding-top: 1.41vw;
+          img {
+            left: -6.09vw;
+            width: 41.41vw;
+          }
+        }
+      }
+    }
+    &:nth-child(5n + 4) {
+      width: 46.88vw;
+      .item-container {
+        .item-content {
+        }
+        .item-img {
+          img {
+          }
+        }
+      }
+    }
+    &:nth-child(5n + 5) {
+      width: calc(100% - 47.14vw);
+      padding-bottom: 3.44vw;
+      &:before {
+        left: 5.89vw;
+        height: 37.5vw;
+      }
+      .item-container {
+        padding-right: 12.5vw;
+        padding-left: 5.89vw;
+        .item-content {
+          //   padding-top: 2.71vw;
+          padding-top: 0.68vw;
+          padding-right: 4.69vw;
+          h3 {
+          }
+        }
+        .item-img {
+          padding-top: 10.89vw;
+          img {
+          }
+        }
+      }
+    }
+  }
+}

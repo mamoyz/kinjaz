@@ -5,10 +5,10 @@ $red: #ca0813;
 * {
   box-sizing: border-box;
 }
-.vertical-line{
+.vertical-line {
   width: 1px;
   background: #222;
-  &.full{
+  &.full {
     height: 100%;
   }
   bottom: 0;
@@ -62,44 +62,44 @@ a {
     top: 50%;
     transition: all 0.5s;
   }
-  span{
+  span {
     transition: all 0.5s;
-    &:nth-child(1){
+    &:nth-child(1) {
       opacity: 1;
-        transform: translate(0,0);
+      transform: translate(0, 0);
       display: block;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       position: absolute;
-    left: 50px;
-    top: 50%;
-    transform: translate(0,100%);
-    opacity: 0;
+      left: 50px;
+      top: 50%;
+      transform: translate(0, 100%);
+      opacity: 0;
     }
   }
-  &:hover{
-    &:after{
+  &:hover {
+    &:after {
       right: 0px;
     }
-    span{
-      &:nth-child(1){
+    span {
+      &:nth-child(1) {
         opacity: 0;
-        transform: translate(0,-150%);
+        transform: translate(0, -150%);
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         opacity: 1;
-        transform: translate(0,-50%);
+        transform: translate(0, -50%);
       }
     }
   }
-
 }
 
 @import "animations";
 @import "header";
 @import "home";
+@import "portfolio";
 @import "footer";
 
-.parallax{
+.parallax {
   transition: 1.5s all 0s;
 }

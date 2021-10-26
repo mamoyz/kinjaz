@@ -8,12 +8,15 @@ header {
   z-index: 100;
   padding: 20px 0;
   color: #fff;
+  &.page-header {
+    border-bottom: 1px solid #fff;
+  }
   .header-container {
     display: flex;
     align-items: center;
     .header-menu {
-            opacity: 0;
-      transform: translate(0,30px);
+      opacity: 0;
+      transform: translate(0, 30px);
       transition: 0.5s all 0.5s;
 
       ul {
@@ -42,7 +45,7 @@ header {
     }
     .header-logo {
       opacity: 0;
-      transform: translate(0,30px);
+      transform: translate(0, 30px);
       transition: 0.5s all 0.5s;
       a {
         display: block;
@@ -56,11 +59,11 @@ header {
       }
     }
   }
-  &.init{
+  &.init {
     .header-logo,
-    .header-container .header-menu{
+    .header-container .header-menu {
       opacity: 1;
-      transform: translate(0,0);
+      transform: translate(0, 0);
     }
   }
 }

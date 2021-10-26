@@ -6,13 +6,12 @@
     overflow: hidden;
     > div {
       position: absolute;
-       opacity: 0;
-        transition-property: all;
-        transition-duration: 1s;
+      opacity: 0;
+      transition-property: all;
+      transition-duration: 1s;
       img {
         width: 100%;
         height: 100%;
-       
       }
       &:nth-child(1) {
         width: 752px;
@@ -26,7 +25,7 @@
         height: 592px;
         top: 0;
         left: 752px;
-        transition-delay: .5s;
+        transition-delay: 0.5s;
       }
       &:nth-child(3) {
         width: 373px;
@@ -34,7 +33,6 @@
         top: 0;
         left: 1177px;
         transition-delay: 0.9s;
-
       }
       &:nth-child(4) {
         width: 374px;
@@ -42,7 +40,6 @@
         top: 0;
         left: 1550px;
         transition-delay: 0.7s;
-
       }
       &:nth-child(5) {
         width: 374px;
@@ -50,7 +47,6 @@
         top: 307px;
         left: 0;
         transition-delay: 1.4s;
-
       }
       &:nth-child(6) {
         width: 378px;
@@ -58,7 +54,6 @@
         top: 307px;
         left: 374px;
         transition-delay: 1.1s;
-
       }
       &:nth-child(7) {
         width: 376px;
@@ -66,7 +61,6 @@
         left: 0;
         top: 597px;
         transition-delay: 1s;
-
       }
       &:nth-child(8) {
         width: 432px;
@@ -74,7 +68,6 @@
         left: 752px;
         top: 592px;
         transition-delay: 1.2s;
-
       }
       &:nth-child(9) {
         width: 746px;
@@ -82,13 +75,12 @@
         top: 292px;
         left: 1177px;
         transition-delay: 1.3s;
-
       }
     }
   }
-  &.init{
-    .collage-container{
-      > div{
+  &.init {
+    .collage-container {
+      > div {
         opacity: 1;
       }
     }
@@ -105,7 +97,7 @@
     height: 100%;
     object-fit: cover;
   }
-  &.init{
+  &.init {
     opacity: 1;
   }
 }
@@ -116,47 +108,46 @@
   padding-right: 20px;
   padding-bottom: 160px;
   position: relative;
-  .vertical-line{
-    &:nth-child(1){
+  .vertical-line {
+    &:nth-child(1) {
       left: 138px;
       height: 1190px;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       left: 825px;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       left: 1105px;
     }
-    &:nth-child(4){
-
+    &:nth-child(4) {
       left: 1587px;
     }
   }
   &-container {
     display: flex;
     position: relative;
-    .kinjaz-member{
+    .kinjaz-member {
       position: absolute;
-    left: 760px;
-    top: 0px;
-    width: 620px;
-    bottom: 0;
-    height: 100%;
-    z-index: 5;
-    transform: rotate(4deg) scale(.7);
-    transition:all .8s cubic-bezier(.7,0,.3,1),transform 1.5s cubic-bezier(.785,.135,.15,.86);
-    opacity: 0;
-    &.init{
-      opacity: 1;
-      transform: scale(1) rotate(0deg);
-    }
-    img{
-      width: 100%;
-      height: auto;
-      display: block;
-    animation:float 10s cubic-bezier(.4,.1,.3,.9) infinite;
-
-    }
+      left: 760px;
+      top: 0px;
+      width: 620px;
+      bottom: 0;
+      height: 100%;
+      z-index: 5;
+      transform: rotate(4deg) scale(0.7);
+      transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1),
+        transform 1.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      opacity: 0;
+      &.init {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        animation: float 10s cubic-bezier(0.4, 0.1, 0.3, 0.9) infinite;
+      }
     }
     .col {
       &.col1 {
@@ -171,7 +162,7 @@
           height: auto;
           opacity: 0;
           transition: all 0.5s;
-          &.init{
+          &.init {
             opacity: 1;
           }
         }
@@ -187,8 +178,8 @@
           position: relative;
           opacity: 0;
           transition: all 1s;
-          &:after{
-            content:" ";
+          &:after {
+            content: " ";
             height: 1px;
             width: 0%;
             left: 0;
@@ -200,9 +191,9 @@
           strong {
             font-weight: 700;
           }
-          &.init{
+          &.init {
             opacity: 1;
-            &:after{
+            &:after {
               width: 100%;
             }
           }
@@ -210,26 +201,25 @@
         p {
           margin: 0 0 210px 0;
           overflow: hidden;
-          span{
-
+          span {
             display: block;
-            transition: transform 1s cubic-bezier(.22,.61,.36,1);
+            transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
             transform: translateY(-100%);
           }
-          &.init{
-            span{
+          &.init {
+            span {
               transform: translateY(0%);
             }
           }
         }
-        .btn-primary{
-          transform: translate(0,-20px);
+        .btn-primary {
+          transform: translate(0, -20px);
           opacity: 0;
-              transition: all 1s cubic-bezier(.22,.61,.36,1);
-              &.init{
-                transform: translate(0,0);
-                opacity: 1;
-              }
+          transition: all 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+          &.init {
+            transform: translate(0, 0);
+            opacity: 1;
+          }
         }
       }
       &.col2 {
@@ -254,7 +244,7 @@
           opacity: 0;
           top: 50px;
           transition: all 1s;
-          &.init{
+          &.init {
             opacity: 1;
             top: 0;
           }
@@ -274,7 +264,7 @@
           text-transform: uppercase;
           opacity: 0;
           transition: all 0.5s;
-          &.init{
+          &.init {
             opacity: 1;
           }
         }
@@ -285,7 +275,7 @@
           margin-bottom: 40px;
           opacity: 0;
           transition: all 0.5s;
-          &.init{
+          &.init {
             opacity: 1;
           }
           > div {
@@ -298,10 +288,10 @@
             background-image: url("/assets/images/dot.svg");
           }
         }
-        p{
+        p {
           opacity: 0;
-          transition:all 0.5s;
-          &.init{
+          transition: all 0.5s;
+          &.init {
             opacity: 1;
           }
         }
@@ -311,7 +301,7 @@
           justify-content: center;
           opacity: 0;
           transition: all 0.5s;
-          &.init{
+          &.init {
             opacity: 1;
           }
           a {
@@ -349,14 +339,13 @@
     left: 0;
     letter-spacing: 3px;
     overflow: hidden;
-    span{
+    span {
       display: block;
       transform: translateY(-100%);
-      transition: transform 1s cubic-bezier(.22,.61,.36,1);
-    
+      transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
-    &.init{
-      span{
+    &.init {
+      span {
         transform: translateY(0%);
       }
     }
@@ -398,7 +387,7 @@
         letter-spacing: 4px;
         overflow: hidden;
         padding: 5px 0;
-        span{
+        span {
           transform: translateY(-140%);
           display: block;
         }
@@ -411,49 +400,45 @@
         margin: 0;
         letter-spacing: 3px;
         overflow: hidden;
-        span{
+        span {
           transform: translateY(-140%);
           display: block;
         }
       }
-        @for $i from 1 through 5 {
-    &:nth-child(#{$i}) {
-      .avatar{
-        img{
-        transition: 1s all  #{($i * .2) + .3}s ease;
-
-        }
-        &:before{
-          transition: .5s all  #{$i * .2}s ease;
-
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          .avatar {
+            img {
+              transition: 1s all #{($i * 0.2) + 0.3}s ease;
+            }
+            &:before {
+              transition: 0.5s all #{$i * 0.2}s ease;
+            }
+          }
+          h3 {
+            span {
+              transition: 0.5s all #{($i * 0.2) + 0.6}s ease;
+            }
+          }
+          h4 {
+            span {
+              transition: 0.5s all #{($i * 0.2) + 0.8}s ease;
+            }
+          }
         }
       }
-      h3{
-        span{
-        transition: .5s all  #{($i * .2) + .6}s ease;
-
-        }
-      }
-      h4{
-        span{
-          transition: .5s all  #{($i * .2) + .8}s ease;
-
-        }
-
-      }
-    }
-  }
-      &.init{
-        .avatar{
-          img{
+      &.init {
+        .avatar {
+          img {
             opacity: 1;
           }
-          &:before{
+          &:before {
             height: 270px;
           }
         }
-        h4,h3{
-          span{
+        h4,
+        h3 {
+          span {
             transform: translateY(0%);
           }
         }
@@ -472,29 +457,30 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    .yz-animate{
-      h3{
-
+    .yz-animate {
+      h3 {
         transition: 0.5s all 0s;
       }
-      img{
-
+      img {
         transition: 0.5s all 0.5s;
       }
-      h3,img{
-            opacity: 0;
-    transform: translate(0,30px);
+      h3,
+      img {
+        opacity: 0;
+        transform: translate(0, 30px);
       }
-      .btn-primary{
-            opacity: 0;
-    transform: translate(0,-30px);
-    transition:.5s all 1s;
+      .btn-primary {
+        opacity: 0;
+        transform: translate(0, -30px);
+        transition: 0.5s all 1s;
       }
-      &.init{
-      h3,img,.btn-primary{
-        opacity: 1;
-        transform: translate(0,0);
-      }
+      &.init {
+        h3,
+        img,
+        .btn-primary {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
       }
     }
   }
@@ -503,7 +489,7 @@
     text-transform: uppercase;
     font-size: 174px;
     line-height: 167px;
-    font-family: "Barlow",sans-serif;
+    font-family: "Barlow", sans-serif;
     font-weight: 900;
     -ms-writing-mode: tb-rl;
     writing-mode: tb-rl;
@@ -513,12 +499,11 @@
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: $red;
-    transform: rotate( 
--180deg);
+    transform: rotate(-180deg);
     z-index: 5;
     top: 325px;
     left: -40px;
-    span{
+    span {
       display: block;
     }
   }
@@ -534,10 +519,9 @@
     position: relative;
     z-index: 2;
     letter-spacing: 3px;
-    span{
+    span {
       display: block;
     }
-
   }
   .dance {
     flex: 0 0 100%;
@@ -545,7 +529,7 @@
     padding-top: 155px;
     padding-left: 340px;
     position: relative;
-    .parallax{
+    .parallax {
       position: relative;
       z-index: 5;
     }
@@ -676,7 +660,7 @@
     padding-left: 120px;
     padding-top: 10px;
     position: relative;
-    .parallax{
+    .parallax {
       position: relative;
       z-index: 5;
     }
