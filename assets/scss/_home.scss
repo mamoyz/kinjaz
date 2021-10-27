@@ -285,7 +285,7 @@
             flex: 0 0 70px;
             background-position: 0px -20px;
             background-size: 70px 108px;
-            background-image: url("/assets/images/dot.svg");
+            background-image: url("../images/dot.svg");
           }
         }
         p {
@@ -448,7 +448,7 @@
 }
 
 .home-portfolio {
-  background: url("/assets/images/Home_Page/home-background-min.jpg") no-repeat;
+  background: url("../images/Home_Page/home-background-min.jpg") no-repeat;
   background-size: cover;
   background-position: center top;
   padding-bottom: 335px;
