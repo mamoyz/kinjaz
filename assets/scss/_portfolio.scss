@@ -1,5 +1,6 @@
 .portfolio-layout {
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center top;
   position: relative;
   background-repeat: no-repeat;
   .vertical-title {
@@ -33,7 +34,6 @@
   padding-bottom: 475px;
 }
 .portfolio-item {
-  overflow: hidden;
   h1 {
     font-family: $font;
     font-weight: 900;
