@@ -4,6 +4,9 @@
     width: 100%;
     height: 865px;
     overflow: hidden;
+    @include mobile() {
+      height: 97vw;
+    }
     > div {
       position: absolute;
       opacity: 0;
@@ -19,6 +22,12 @@
         top: 0;
         left: 0;
         transition-delay: 1.3s;
+        @include mobile() {
+          width: 34vw;
+          height: 19vw;
+          top: 0;
+          left: 0;
+        }
       }
       &:nth-child(2) {
         width: 425px;
@@ -26,6 +35,12 @@
         top: 0;
         left: 752px;
         transition-delay: 0.5s;
+        @include mobile() {
+          width: 31.5vw;
+          height: 67vw;
+          top: 0;
+          left: 34vw;
+        }
       }
       &:nth-child(3) {
         width: 373px;
@@ -33,6 +48,12 @@
         top: 0;
         left: 1177px;
         transition-delay: 0.9s;
+        @include mobile() {
+          width: 34.5vw;
+          height: 19vw;
+          top: 0;
+          left: 65.5vw;
+        }
       }
       &:nth-child(4) {
         width: 374px;
@@ -40,6 +61,12 @@
         top: 0;
         left: 1550px;
         transition-delay: 0.7s;
+        @include mobile() {
+          top: 19vw;
+          left: 65.5vw;
+          width: 34.5vw;
+          height: 23vw;
+        }
       }
       &:nth-child(5) {
         width: 374px;
@@ -47,6 +74,12 @@
         top: 307px;
         left: 0;
         transition-delay: 1.4s;
+        @include mobile() {
+          left: 17vw;
+          top: 19vw;
+          width: 17vw;
+          height: 27vw;
+        }
       }
       &:nth-child(6) {
         width: 378px;
@@ -54,6 +87,12 @@
         top: 307px;
         left: 374px;
         transition-delay: 1.1s;
+        @include mobile() {
+          left: 0;
+          top: 46vw;
+          width: 34vw;
+          height: 51vw;
+        }
       }
       &:nth-child(7) {
         width: 376px;
@@ -61,6 +100,12 @@
         left: 0;
         top: 597px;
         transition-delay: 1s;
+        @include mobile() {
+          left: 0;
+          top: 19vw;
+          width: 17vw;
+          height: 27vw;
+        }
       }
       &:nth-child(8) {
         width: 432px;
@@ -68,6 +113,12 @@
         left: 752px;
         top: 592px;
         transition-delay: 1.2s;
+        @include mobile() {
+          left: 34vw;
+          top: 67vw;
+          width: 31.5vw;
+          height: 30vw;
+        }
       }
       &:nth-child(9) {
         width: 746px;
@@ -75,6 +126,12 @@
         top: 292px;
         left: 1177px;
         transition-delay: 1.3s;
+        @include mobile() {
+          left: 65.5vw;
+          top: 42vw;
+          width: 34.5vw;
+          height: 55vw;
+        }
       }
     }
   }
@@ -100,6 +157,9 @@
   &.init {
     opacity: 1;
   }
+  @include mobile() {
+    height: 64vw;
+  }
 }
 
 .home-about {
@@ -108,7 +168,16 @@
   padding-right: 20px;
   padding-bottom: 160px;
   position: relative;
+  @include mobile() {
+    padding-top: 13vw;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    padding-bottom: 16vw;
+  }
   .vertical-line {
+    @include mobile() {
+      display: none;
+    }
     &:nth-child(1) {
       left: 138px;
       height: 1190px;
@@ -126,6 +195,10 @@
   &-container {
     display: flex;
     position: relative;
+    @include mobile() {
+      flex-direction: column;
+    }
+
     .kinjaz-member {
       position: absolute;
       left: 760px;
@@ -138,6 +211,14 @@
       transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1),
         transform 1.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
       opacity: 0;
+      @include mobile() {
+        transform: rotate(4deg) scale(0.95);
+        height: 180vw;
+        top: 134vw;
+        width: 70vw;
+        left: 0;
+      }
+
       &.init {
         opacity: 1;
         transform: scale(1) rotate(0deg);
@@ -156,12 +237,21 @@
         .content {
           padding-left: 80px;
           width: 580px;
+          @include mobile() {
+            padding-left: 0;
+            width: 100%;
+          }
         }
         img {
           width: 213px;
           height: auto;
           opacity: 0;
           transition: all 0.5s;
+          @include mobile() {
+            margin: auto;
+            width: 24vw;
+            display: block;
+          }
           &.init {
             opacity: 1;
           }
@@ -178,6 +268,16 @@
           position: relative;
           opacity: 0;
           transition: all 1s;
+          @include mobile() {
+            margin: 15vw 0 8vw;
+            width: 100%;
+            text-align: center;
+            font-size: 11vw;
+            letter-spacing: 1vw;
+            line-height: 14vw;
+            padding-bottom: 3vw;
+          }
+
           &:after {
             content: " ";
             height: 1px;
@@ -201,6 +301,10 @@
         p {
           margin: 0 0 210px 0;
           overflow: hidden;
+          @include mobile() {
+            margin: 0 0 20vw 0;
+          }
+
           span {
             display: block;
             transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -216,6 +320,10 @@
           transform: translate(0, -20px);
           opacity: 0;
           transition: all 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+          @include mobile() {
+            margin-left: 11vw;
+          }
+
           &.init {
             transform: translate(0, 0);
             opacity: 1;
@@ -244,6 +352,15 @@
           opacity: 0;
           top: 50px;
           transition: all 1s;
+          @include mobile() {
+            font-size: 18vw;
+            line-height: 16vw;
+            letter-spacing: 0.8vw;
+            margin: 31vw 0px 0px 0;
+            top: 0;
+            left: 43vw;
+          }
+
           &.init {
             opacity: 1;
             top: 0;
@@ -255,6 +372,12 @@
         padding-top: 100px;
         flex: 0 0 100%;
         max-width: 324px;
+        @include mobile() {
+          padding-left: 0;
+          padding-top: 34vw;
+          max-width: 100%;
+        }
+
         h3 {
           margin: 0;
           font-size: 42px;
@@ -264,6 +387,12 @@
           text-transform: uppercase;
           opacity: 0;
           transition: all 0.5s;
+          @include mobile() {
+            font-size: 7vw;
+            margin-left: 16vw;
+            letter-spacing: 1.3vw;
+          }
+
           &.init {
             opacity: 1;
           }
@@ -275,6 +404,13 @@
           margin-bottom: 40px;
           opacity: 0;
           transition: all 0.5s;
+          @include mobile() {
+            margin-left: 16vw;
+            margin-top: 12vw;
+            margin-bottom: 8vw;
+            justify-content: flex-start;
+          }
+
           &.init {
             opacity: 1;
           }
@@ -286,6 +422,14 @@
             background-position: 0px -20px;
             background-size: 70px 108px;
             background-image: url("../images/dot.svg");
+            @include mobile() {
+              margin: 0 5vw;
+              height: 116vw;
+              width: 13vw;
+              flex: 0 0 13vw;
+              background-position: 0px -3vw;
+              background-size: 13vw 20.5vw;
+            }
           }
         }
         p {
@@ -301,15 +445,25 @@
           justify-content: center;
           opacity: 0;
           transition: all 0.5s;
+          @include mobile() {
+            margin-top: 6vw;
+          }
+
           &.init {
             opacity: 1;
           }
           a {
             display: block;
             margin: 0 20px;
+            @include mobile() {
+              margin: 0 4vw;
+            }
             img {
               width: 83px;
               height: auto;
+              @include mobile() {
+                width: 16vw;
+              }
             }
           }
         }
@@ -321,6 +475,9 @@
 .home-leadership {
   background: $red;
   padding: 40px 0 45px;
+  @include mobile() {
+    padding: 8vw 0 4vw;
+  }
 
   .container {
     position: relative;
@@ -339,6 +496,14 @@
     left: 0;
     letter-spacing: 3px;
     overflow: hidden;
+    @include mobile() {
+      font-size: 9vw;
+      line-height: 10vw;
+      -webkit-text-stroke-width: 0.3vw;
+      letter-spacing: 0.5vw;
+      padding-left: 4vw;
+    }
+
     span {
       display: block;
       transform: translateY(-100%);
@@ -352,11 +517,21 @@
   }
   .team-list {
     display: flex;
-    padding-left: 35px;
+    padding-left: 5px;
+    @include mobile() {
+      flex-wrap: wrap;
+      padding-left: 0;
+      justify-content: center;
+    }
     .team-list-item {
       flex: 0 0 310px;
       margin-right: 24px;
-
+      @include mobile() {
+        flex: 0 0 35vw;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        margin-bottom: 5vw;
+      }
       .avatar {
         position: relative;
         img {
@@ -366,6 +541,10 @@
           display: block;
           position: relative;
           z-index: 5;
+          @include mobile() {
+            width: 32vw;
+            transition: 1s all 0s ease;
+          }
         }
         &:before {
           content: " ";
@@ -391,6 +570,13 @@
           transform: translateY(-140%);
           display: block;
         }
+        @include mobile() {
+          font-size: 5vw;
+          line-height: 6vw;
+          margin: 0;
+          letter-spacing: 0.3vw;
+          padding: 0;
+        }
       }
       h4 {
         font-size: 33px;
@@ -404,25 +590,32 @@
           transform: translateY(-140%);
           display: block;
         }
+        @include mobile() {
+          font-size: 4vw;
+          line-height: 5vw;
+          letter-spacing: 0.2vw;
+        }
       }
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          .avatar {
-            img {
-              transition: 1s all #{($i * 0.2) + 0.3}s ease;
+      @include desktop() {
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            .avatar {
+              img {
+                transition: 1s all #{($i * 0.2) + 0.3}s ease;
+              }
+              &:before {
+                transition: 0.5s all #{$i * 0.2}s ease;
+              }
             }
-            &:before {
-              transition: 0.5s all #{$i * 0.2}s ease;
+            h3 {
+              span {
+                transition: 0.5s all #{($i * 0.2) + 0.6}s ease;
+              }
             }
-          }
-          h3 {
-            span {
-              transition: 0.5s all #{($i * 0.2) + 0.6}s ease;
-            }
-          }
-          h4 {
-            span {
-              transition: 0.5s all #{($i * 0.2) + 0.8}s ease;
+            h4 {
+              span {
+                transition: 0.5s all #{($i * 0.2) + 0.8}s ease;
+              }
             }
           }
         }
@@ -434,6 +627,9 @@
           }
           &:before {
             height: 270px;
+            @include mobile() {
+              height: 30vw;
+            }
           }
         }
         h4,
@@ -453,10 +649,18 @@
   background-position: center top;
   padding-bottom: 335px;
   position: relative;
+  @include mobile() {
+    padding-bottom: 19vw;
+  }
+
   .portfolio-container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    @include mobile() {
+      flex-direction: column;
+    }
+
     .yz-animate {
       h3 {
         transition: 0.5s all 0s;
@@ -506,6 +710,13 @@
     span {
       display: block;
     }
+    @include mobile() {
+      font-size: 18vw;
+      line-height: 17vw;
+      top: 36vw;
+      left: -8vw;
+      letter-spacing: 0.7vw;
+    }
   }
   h3 {
     color: transparent;
@@ -522,6 +733,19 @@
     span {
       display: block;
     }
+    @include mobile() {
+      font-size: 9.5vw;
+      line-height: 9.5vw;
+      -webkit-text-stroke-width: 1px;
+      letter-spacing: 0.5vw;
+    }
+  }
+  .btn-primary {
+    @include mobile() {
+      font-size: 3vw;
+      padding: 2vw 12vw 2vw 7vw;
+      letter-spacing: 0.5vw;
+    }
   }
   .dance {
     flex: 0 0 100%;
@@ -529,6 +753,12 @@
     padding-top: 155px;
     padding-left: 340px;
     position: relative;
+    @include mobile() {
+      max-width: 100%;
+      padding-top: 18vw;
+      padding-left: 34vw;
+    }
+
     .parallax {
       position: relative;
       z-index: 5;
@@ -542,21 +772,36 @@
       width: 900px;
       height: 600px;
       z-index: 1;
+      @include mobile() {
+        width: 100vw;
+        height: 75vw;
+      }
     }
     h3 {
       -webkit-text-stroke-color: #000;
       margin-bottom: 30px;
+      @include mobile() {
+        margin-bottom: 5vw;
+      }
     }
     img {
       position: relative;
       z-index: 5;
       width: 561px;
       height: auto;
+      @include mobile() {
+        width: 69vw;
+        margin-left: 4vw;
+      }
     }
     .btn-primary {
       top: -36px;
       z-index: 50;
       left: 90px;
+      @include mobile() {
+        top: -6vw;
+        left: -6vw;
+      }
     }
   }
   .kinjabang-noodles {
@@ -564,32 +809,58 @@
     max-width: calc(100% - 900px);
     text-align: center;
     padding-top: 122px;
+    @include mobile() {
+      max-width: 100vw;
+      padding-top: 23vw;
+    }
+
     h3 {
       -webkit-text-stroke-color: #fff;
       max-width: 560px;
       margin: 0 auto -27px;
       top: -47px;
       //   margin-bottom: 30px;
+      @include mobile() {
+        top: -7vw;
+        max-width: 100vw;
+        margin: 0 auto;
+      }
     }
     img {
       height: auto;
       &.top {
         width: 558px;
+        @include mobile() {
+          width: 68vw;
+        }
       }
       &.left {
         width: 223px;
         margin-right: 56px;
         // margin-left: 190px;
+        @include mobile() {
+          width: 26vw;
+          margin-right: 6.5vw;
+        }
       }
       &.right {
         margin-left: 56px;
         width: 223px;
+        @include mobile() {
+          width: 26vw;
+          margin-left: 6.5vw;
+        }
       }
     }
     .btn-primary {
       top: -30px;
       left: -20px;
       padding-right: 140px;
+      @include mobile() {
+        top: -6vw;
+        left: -1vw;
+        padding-right: 18vw;
+      }
     }
   }
   .aesthetik {
@@ -598,19 +869,37 @@
     text-align: right;
     padding-right: 210px;
     padding-top: 30px;
+    @include mobile() {
+      text-align: center;
+      padding-right: 0;
+      padding-top: 10vw;
+    }
+
     h3 {
       -webkit-text-stroke-color: #fff;
       position: absolute;
       top: 280px;
       left: 610px;
+      @include mobile() {
+        top: 10vw;
+        left: 23vw;
+      }
     }
     .btn-primary {
       top: -37px;
       left: 70px;
+      @include mobile() {
+        top: -10vw;
+        left: 1vw;
+      }
     }
     img {
       width: 795px;
       height: auto;
+      @include mobile() {
+        width: 78vw;
+        margin: 6vw auto;
+      }
     }
   }
   .creative-direction {
@@ -620,38 +909,73 @@
     max-width: 1020px;
     flex: 0 0 100%;
     margin-bottom: -85px;
+    @include mobile() {
+      top: -10vw;
+      padding-left: 11vw;
+      max-width: 100vw;
+      flex: 0 0 100%;
+    }
+
     h3 {
       -webkit-text-stroke-color: #fff;
       max-width: 500px;
       position: relative;
       top: 55px;
+      @include mobile() {
+        top: 4vw;
+      }
     }
     img {
       width: 795px;
       height: auto;
+      @include mobile() {
+        width: 78vw;
+      }
     }
     .btn-primary {
       right: -320px;
       bottom: 200px;
       position: absolute;
+      @include mobile() {
+        right: 32vw;
+        bottom: -5vw;
+      }
     }
   }
   .production {
     padding-left: 287px;
     flex: 0 0 100%;
     max-width: 900px;
+    @include mobile() {
+      max-width: 100vw;
+      padding-left: 0;
+      text-align: center;
+    }
+
     h3 {
       -webkit-text-stroke-color: #fff;
       margin-bottom: 20px;
+      @include mobile() {
+        margin: 34vw 0vw 3vw 0;
+        text-align: center;
+      }
     }
     img {
       width: 564px;
       height: auto;
       margin-left: 50px;
+      @include mobile() {
+        margin-left: 0;
+        width: 66vw;
+      }
     }
     .btn-primary {
       top: -24px;
       left: -60px;
+      @include mobile() {
+        top: -6vw;
+        left: 0;
+      }
     }
   }
   .new-age-media {
@@ -660,6 +984,12 @@
     padding-left: 120px;
     padding-top: 10px;
     position: relative;
+    @include mobile() {
+      max-width: 100vw;
+      padding-left: 0;
+      padding-top: 0;
+    }
+
     .parallax {
       position: relative;
       z-index: 5;
@@ -673,22 +1003,412 @@
       right: 0;
       height: 410px;
       z-index: 1;
+      @include mobile() {
+        top: 37vw;
+        height: 59vw;
+        left: 0;
+      }
     }
     img {
       position: relative;
       z-index: 5;
       width: 650px;
       height: auto;
+      @include mobile() {
+        width: 70vw;
+      }
     }
     h3 {
       margin: 80px 0 45px 57px;
-      -webkit-text-stroke-color: #000;
+      @include mobile() {
+        -webkit-text-stroke-color: #fff;
+        margin: 8vw 0 6vw;
+        text-align: center;
+      }
     }
     .btn-primary {
       top: -30px;
       left: 120px;
       position: relative;
       z-index: 5;
+      @include mobile() {
+        top: -4vw;
+        left: 26vw;
+        padding-right: 16vw;
+        border-color: #000;
+        color: #000;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .home-collage {
+    .collage-container {
+      height: 45.05vw;
+
+      > div {
+        img {
+        }
+        &:nth-child(1) {
+          width: 39.17vw;
+          height: 15.99vw;
+        }
+        &:nth-child(2) {
+          width: 22.14vw;
+          height: 30.83vw;
+          left: 39.17vw;
+        }
+        &:nth-child(3) {
+          width: 19.43vw;
+          height: 15.21vw;
+          left: 61.3vw;
+        }
+        &:nth-child(4) {
+          width: 19.48vw;
+          height: 15.21vw;
+          left: 80.73vw;
+        }
+        &:nth-child(5) {
+          width: 19.48vw;
+          height: 15.1vw;
+          top: 15.99vw;
+        }
+        &:nth-child(6) {
+          width: 19.69vw;
+          height: 29.27vw;
+          top: 15.99vw;
+          left: 19.48vw;
+        }
+        &:nth-child(7) {
+          width: 19.58vw;
+          height: 14.22vw;
+          top: 31.09vw;
+        }
+        &:nth-child(8) {
+          width: 22.5vw;
+          height: 14.17vw;
+          left: 39.17vw;
+          top: 30.83vw;
+        }
+        &:nth-child(9) {
+          width: 38.85vw;
+          height: 30.05vw;
+          top: 15.21vw;
+          left: 61.3vw;
+        }
+      }
+    }
+  }
+
+  .home-video {
+    height: 34.22vw;
+  }
+
+  .home-about {
+    padding-top: 2.86vw;
+    padding-left: 5.36vw;
+    padding-right: 1.04vw;
+    padding-bottom: 8.33vw;
+
+    .vertical-line {
+      &:nth-child(1) {
+        left: 7.19vw;
+        height: 61.98vw;
+      }
+      &:nth-child(2) {
+        left: 42.97vw;
+      }
+      &:nth-child(3) {
+        left: 57.55vw;
+      }
+      &:nth-child(4) {
+        left: 82.66vw;
+      }
+    }
+    &-container {
+      .kinjaz-member {
+        left: 39.58vw;
+        top: 1px;
+        width: 32.29vw;
+        transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+      }
+      .col {
+        &.col1 {
+          max-width: 58.59vw;
+          .content {
+            padding-left: 4.17vw;
+            width: 30.21vw;
+          }
+          img {
+            width: 11.09vw;
+          }
+          h1 {
+            font-size: 3.85vw;
+            line-height: 3.7vw;
+            margin: 10.94vw 1px 2.34vw 0;
+            padding-bottom: 2.34vw;
+            width: 12.5vw;
+            letter-spacing: 0.36vw;
+
+            &:after {
+              height: 1px;
+            }
+          }
+          p {
+            margin: 0 0 10.94vw 0;
+          }
+          .btn-primary {
+            transform: translate(0, -1.04vw);
+          }
+        }
+        &.col2 {
+          max-width: 17.4vw;
+          h2 {
+            font-size: 9.06vw;
+            line-height: 8.7vw;
+            letter-spacing: 0.26vw;
+            -webkit-text-stroke-width: 0.1vw;
+            margin: 9.38vw 1px 1px 0;
+            top: 2.6vw;
+
+            &.init {
+            }
+          }
+        }
+        &.col3 {
+          padding-left: 3.39vw;
+          padding-top: 5.21vw;
+          max-width: 16.88vw;
+
+          h3 {
+            font-size: 2.19vw;
+            letter-spacing: 0.21vw;
+          }
+          .circles {
+            margin-top: 3.65vw;
+            margin-bottom: 2.08vw;
+
+            > div {
+              margin: 0 1.04vw;
+              height: 32.14vw;
+              width: 3.65vw;
+              flex: 0 0 3.65vw;
+              background-position: 1px -1.04vw;
+              background-size: 3.65vw 5.63vw;
+              @include mobile() {
+                background-position: 1px -3vw;
+              }
+            }
+          }
+
+          .partners {
+            margin-top: 3.13vw;
+
+            a {
+              margin: 0 1.04vw;
+
+              img {
+                width: 4.32vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home-leadership {
+    padding: 2.08vw 0 2.34vw;
+
+    h2 {
+      font-size: 4.22vw;
+      line-height: 4.06vw;
+      -webkit-text-stroke-width: 0.1vw;
+      letter-spacing: 0.16vw;
+    }
+    .team-list {
+      padding-left: 0.26vw;
+
+      .team-list-item {
+        flex: 0 0 16.15vw;
+        margin-right: 1.25vw;
+
+        .avatar {
+          img {
+            width: 14.9vw;
+          }
+        }
+        h3 {
+          font-size: 2.19vw;
+          margin: 0.78vw 0 0.42vw 0;
+          letter-spacing: 0.21vw;
+          padding: 0.26vw 0;
+        }
+        h4 {
+          font-size: 1.72vw;
+          letter-spacing: 0.16vw;
+        }
+
+        &.init {
+          .avatar {
+            &:before {
+              height: 14.06vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home-portfolio {
+    padding-bottom: 17.45vw;
+
+    .portfolio-container {
+      .yz-animate {
+        h3,
+        img {
+          transform: translate(0, 1.56vw);
+        }
+        .btn-primary {
+          transform: translate(0, -1.56vw);
+        }
+      }
+    }
+    h2 {
+      font-size: 9.06vw;
+      line-height: 8.7vw;
+      letter-spacing: 0.26vw;
+      -webkit-text-stroke-width: 0.1vw;
+      top: 16.93vw;
+      left: -2.08vw;
+    }
+    h3 {
+      font-size: 5vw;
+      line-height: 5.1vw;
+      -webkit-text-stroke-width: 0.1vw;
+      letter-spacing: 0.16vw;
+    }
+
+    .dance {
+      max-width: 46.88vw;
+      padding-top: 8.07vw;
+      padding-left: 17.71vw;
+
+      &:before {
+        width: 46.88vw;
+        height: 31.25vw;
+      }
+      h3 {
+        margin-bottom: 1.56vw;
+      }
+      img {
+        width: 29.22vw;
+      }
+      .btn-primary {
+        top: -1.88vw;
+        left: 4.69vw;
+      }
+    }
+    .kinjabang-noodles {
+      max-width: calc(100% - 46.88vw);
+      padding-top: 6.35vw;
+
+      h3 {
+        max-width: 29.17vw;
+        margin: 0 auto -1.41vw;
+        top: -2.45vw;
+      }
+      img {
+        &.top {
+          width: 29.06vw;
+        }
+        &.left {
+          width: 11.61vw;
+          margin-right: 2.92vw;
+          // margin-left: 9.9vw;
+        }
+        &.right {
+          margin-left: 2.92vw;
+          width: 11.61vw;
+        }
+      }
+      .btn-primary {
+        top: -1.56vw;
+        left: -1.04vw;
+        padding-right: 7.29vw;
+      }
+    }
+    .aesthetik {
+      padding-right: 10.94vw;
+      padding-top: 1.56vw;
+
+      h3 {
+        top: 14.58vw;
+        left: 31.77vw;
+      }
+      .btn-primary {
+        top: -1.93vw;
+        left: 3.65vw;
+      }
+      img {
+        width: 41.41vw;
+      }
+    }
+    .creative-direction {
+      top: -12.24vw;
+      padding-left: 11.67vw;
+      max-width: 53.13vw;
+      margin-bottom: -4.43vw;
+
+      h3 {
+        max-width: 26.04vw;
+        top: 2.86vw;
+      }
+      img {
+        width: 41.41vw;
+      }
+      .btn-primary {
+        right: -16.67vw;
+        bottom: 10.42vw;
+      }
+    }
+    .production {
+      padding-left: 14.95vw;
+      max-width: 46.88vw;
+
+      h3 {
+        margin-bottom: 1.04vw;
+      }
+      img {
+        width: 29.38vw;
+        margin-left: 2.6vw;
+      }
+      .btn-primary {
+        top: -1.25vw;
+        left: -3.13vw;
+      }
+    }
+    .new-age-media {
+      max-width: calc(100% - 46.88vw);
+      padding-left: 6.25vw;
+      padding-top: 0.52vw;
+
+      &:before {
+        left: 6.25vw;
+        top: 1.25vw;
+        height: 21.35vw;
+      }
+      img {
+        width: 33.85vw;
+      }
+      h3 {
+        margin: 4.17vw 0 2.34vw 2.97vw;
+      }
+      .btn-primary {
+        top: -1.56vw;
+        left: 6.25vw;
+      }
     }
   }
 }

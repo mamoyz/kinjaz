@@ -6,6 +6,11 @@ $(document).ready(function () {
       $(".atf").addClass("init");
     }
   }, 300);
+
+  $("header .menu-button").click(function (e) {
+    e.preventDefault();
+    $(".header-menu").toggleClass("show");
+  });
   $(window).scroll(function (e) {
     $.each($(".yz-animate"), function (e) {
       let ww = $(window).innerWidth();

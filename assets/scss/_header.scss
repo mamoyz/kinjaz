@@ -1,3 +1,8 @@
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 header {
   background: #000;
   position: fixed;
@@ -8,17 +13,63 @@ header {
   z-index: 100;
   padding: 20px 0;
   color: #fff;
+  @include mobile() {
+    height: $header-height-mobile;
+    padding: 2vw 0;
+  }
   &.page-header {
     // border-bottom: 1px solid #fff;
+  }
+  .menu-button {
+    display: none;
+    @include mobile() {
+      display: block;
+      background: transparent;
+      -webkit-appearance: none;
+      border: none;
+      outline: none;
+      padding: 0;
+      position: absolute;
+      width: 5vw;
+      height: 4vw;
+      left: 3.8vw;
+      top: 4vw;
+      z-index: 1000;
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
   .header-container {
     display: flex;
     align-items: center;
+    @include mobile() {
+      justify-content: center;
+    }
     .header-menu {
       opacity: 0;
       transform: translate(0, 30px);
       transition: 0.5s all 0.5s;
-
+      @include mobile() {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        // display: none;
+        background: #000;
+        padding: 30vw 5vw 5vw;
+        flex-direction: column;
+        transform: translate(-101vw, 0);
+        transition: 0s opacity 0.5s, transform 0.5s;
+        &.show {
+          transition: opacity 0s, transform 0.5s;
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
       ul {
         display: flex;
         justify-content: flex-start;
@@ -26,8 +77,14 @@ header {
         list-style: none;
         padding: 0;
         margin: 0;
+        @include mobile() {
+          flex-direction: column;
+        }
         li {
           margin-right: 90px;
+          @include mobile() {
+            margin-right: 0;
+          }
           &:last-child {
             margin-right: 0;
           }
@@ -38,6 +95,16 @@ header {
             line-height: 22px;
             font-family: $font;
             font-weight: 900;
+            @include mobile() {
+              font-size: 8vw;
+              line-height: 12vw;
+              margin-bottom: 4vw;
+              display: block;
+              letter-spacing: 1vw;
+              color: transparent;
+              -webkit-text-stroke-color: #fff;
+              -webkit-text-stroke-width: 0.4vw;
+            }
           }
         }
       }
@@ -51,7 +118,9 @@ header {
         display: block;
         width: 77px;
         height: 100%;
-
+        @include mobile() {
+          width: 8vw;
+        }
         img {
           width: 100%;
           height: auto;
@@ -60,10 +129,51 @@ header {
     }
   }
   &.init {
-    .header-logo,
-    .header-container .header-menu {
+    .header-logo {
       opacity: 1;
       transform: translate(0, 0);
+    }
+    @include desktop() {
+      .header-container .header-menu {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+  $header-height: 7.29vw;
+  header {
+    height: $header-height;
+    padding: 1.04vw 0;
+
+    .header-container {
+      .header-menu {
+        transform: translate(0, 1.56vw);
+        ul {
+          li {
+            margin-right: 4.69vw;
+
+            a {
+              font-size: 0.99vw;
+              line-height: 1.15vw;
+            }
+          }
+        }
+      }
+      .header-logo {
+        transform: translate(0, 1.56vw);
+        a {
+          width: 4.01vw;
+        }
+      }
+    }
+    &.init {
+      .header-logo {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
     }
   }
 }

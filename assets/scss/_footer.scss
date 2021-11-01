@@ -1,7 +1,15 @@
 footer {
   padding: 145px 0 94px;
   position: relative;
+  @include mobile() {
+    padding: 12vw 0 30vw;
+  }
+
   .vertical-line {
+    @include mobile() {
+      display: none;
+    }
+
     &:nth-child(1) {
       left: 138px;
       height: 405px;
@@ -21,27 +29,53 @@ footer {
     line-height: 92px;
     font-family: $font;
     font-weight: 900;
-    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 2px;
     color: transparent;
     text-transform: uppercase;
     letter-spacing: 3px;
     position: relative;
     top: -15px;
     margin: 0;
+    @include mobile() {
+      top: 0;
+      font-size: 9.5vw;
+      line-height: 9.5vw;
+      letter-spacing: 0.5vw;
+      -webkit-text-stroke-width: 1px;
+      margin-bottom: 6.5vw;
+    }
   }
   .footer-container {
     padding: 0 180px;
     display: flex;
     justify-content: space-between;
+    @include mobile() {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0;
+      text-align: center;
+    }
+
     .contact {
       flex: 0 0 calc(50% - 100px);
       .subscribe {
         margin-top: 50px;
+        @include mobile() {
+          margin-top: 7vw;
+        }
       }
     }
     .logo {
       flex: 0 0 214px;
+      @include mobile() {
+        max-width: 37vw;
+        flex: auto;
+        margin: 16vw auto 10vw;
+      }
+      a {
+        display: block;
+      }
       img {
         width: 100%;
       }
@@ -50,10 +84,69 @@ footer {
       flex: 0 0 calc(50% - 100px);
       text-align: right;
       align-self: flex-end;
+      @include mobile() {
+        flex: auto;
+        text-align: center;
+        align-self: center;
+      }
+
       ul {
         list-style: none;
         margin: 0;
         padding: 0;
+        @include mobile() {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          li {
+            padding: 0 2vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+  footer {
+    padding: 7.55vw 0 4.9vw;
+
+    .vertical-line {
+      &:nth-child(1) {
+        left: 7.19vw;
+        height: 21.09vw;
+      }
+      &:nth-child(2) {
+        left: 42.97vw;
+      }
+      &:nth-child(3) {
+        left: 57.55vw;
+      }
+      &:nth-child(4) {
+        left: 82.66vw;
+      }
+    }
+    h2 {
+      font-size: 5vw;
+      line-height: 4.79vw;
+      -webkit-text-stroke-width: 0.1vw;
+      letter-spacing: 0.16vw;
+      top: -0.78vw;
+    }
+    .footer-container {
+      padding: 0 9.38vw;
+
+      .contact {
+        flex: 0 0 calc(50% - 5.21vw);
+        .subscribe {
+          margin-top: 2.6vw;
+        }
+      }
+      .logo {
+        flex: 0 0 11.15vw;
+      }
+      .social {
+        flex: 0 0 calc(50% - 5.21vw);
       }
     }
   }
