@@ -384,12 +384,14 @@
         }
       }
       &.col3 {
-        padding-left: 65px;
+        padding-left: 45px;
+        padding-right: 20px;
         padding-top: 100px;
         flex: 0 0 100%;
         max-width: 324px;
         @include mobile() {
           padding-left: 0;
+          padding-right: 0;
           padding-top: 34vw;
           max-width: 100%;
         }
@@ -1194,10 +1196,10 @@
           }
         }
         &.col3 {
-          padding-left: 3.39vw;
+          padding-left: 2.34vw;
           padding-top: 5.21vw;
           max-width: 16.88vw;
-
+          padding-right: 1.04vw;
           h3 {
             font-size: 2.19vw;
             letter-spacing: 0.21vw;
