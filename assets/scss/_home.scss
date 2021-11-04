@@ -152,7 +152,7 @@
   position: relative;
   padding-bottom: 56.2%;
   @media(min-width:1921px){
-    padding-bottom: calc(56.2% - (100vw - 1910px)/2);
+    padding-bottom: calc(56.2% - (100vw - 1910px) / 2);
   }
   iframe {
     width: 100%;
