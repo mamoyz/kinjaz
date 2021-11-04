@@ -1,6 +1,8 @@
 footer {
   padding: 145px 0 94px;
   position: relative;
+  max-width: 1920px;
+  margin: auto;
   @include mobile() {
     padding: 12vw 0 30vw;
   }
