@@ -138,6 +138,7 @@
       @include mobile() {
         display: block;
         margin-bottom: 7vw;
+        width: 100%;
       }
     }
     h2 {
@@ -397,9 +398,9 @@
       &::before {
         @include mobile() {
           width: 100vw;
-          height: 65vw;
+          height: 67vw;
           left: 0;
-          top: -7vw;
+          top: -9vw;
         }
       }
     }
