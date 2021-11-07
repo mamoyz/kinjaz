@@ -366,7 +366,7 @@
           white-space: nowrap;
           letter-spacing: 5px;
           color: transparent;
-          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-width: 1px;
           -webkit-text-stroke-color: #fff;
           transform: rotate(-180deg);
           margin: 180px 0px 0px 0;
@@ -392,26 +392,26 @@
       }
       &.col3 {
         padding-left: 45px;
-        padding-right: 20px;
         padding-top: 100px;
         flex: 0 0 100%;
         max-width: 324px;
         @include mobile() {
           padding-left: 0;
           padding-right: 0;
-          padding-top: 34vw;
+          padding-top: 50vw;
           max-width: 100%;
         }
 
         h3 {
           margin: 0;
-          font-size: 42px;
+          font-size: 38px;
           font-family: $font-condensed;
           letter-spacing: 4px;
           font-weight: 400;
           text-transform: uppercase;
           opacity: 0;
           transition: all 0.5s;
+          text-align: center;
           @include mobile() {
             font-size: 7vw;
             margin-left: 16vw;
@@ -512,7 +512,7 @@
     line-height: 78px;
     font-family: $font;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
     margin: 0;
     text-transform: uppercase;
@@ -524,7 +524,7 @@
     @include mobile() {
       font-size: 9vw;
       line-height: 10vw;
-      -webkit-text-stroke-width: 0.3vw;
+      -webkit-text-stroke-width: 1px;
       letter-spacing: 0.5vw;
       padding-left: 4vw;
     }
@@ -585,8 +585,8 @@
       h3 {
         font-size: 42px;
         text-transform: uppercase;
-        font-family: $font-condensed;
-        font-weight: 700;
+        font-family: $font;
+        font-weight: 900;
         margin: 15px 0 8px 0;
         letter-spacing: 4px;
         overflow: hidden;
@@ -598,7 +598,7 @@
         @include mobile() {
           font-size: 5vw;
           line-height: 6vw;
-          margin: 0;
+          margin: 1.5vw 0 0 0;
           letter-spacing: 0.3vw;
           padding: 0;
         }
@@ -676,6 +676,9 @@
   position: relative;
   @include mobile() {
     padding-bottom: 19vw;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: 0 30vw;
   }
 
   .portfolio-container {
@@ -726,7 +729,7 @@
     white-space: nowrap;
     letter-spacing: 5px;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $red;
     transform: rotate(-180deg);
     z-index: 5;
@@ -751,7 +754,7 @@
     font-family: $font;
     font-weight: 900;
     text-transform: uppercase;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     position: relative;
     z-index: 2;
     letter-spacing: 3px;
@@ -948,6 +951,7 @@
       top: 55px;
       @include mobile() {
         top: 4vw;
+        left: -0.2vw;
       }
     }
     img {
@@ -981,7 +985,7 @@
       -webkit-text-stroke-color: #fff;
       margin-bottom: 20px;
       @include mobile() {
-        margin: 34vw 0vw 3vw 0;
+        margin: 34vw 0vw 5vw 0;
         text-align: center;
       }
     }
@@ -1194,7 +1198,7 @@
             font-size: 9.06vw;
             line-height: 8.7vw;
             letter-spacing: 0.26vw;
-            -webkit-text-stroke-width: 0.1vw;
+            -webkit-text-stroke-width: 1px;
             margin: 9.38vw 1px 1px 0;
             top: 2.6vw;
 
@@ -1206,9 +1210,8 @@
           padding-left: 2.34vw;
           padding-top: 5.21vw;
           max-width: 16.88vw;
-          padding-right: 1.04vw;
           h3 {
-            font-size: 2.19vw;
+            font-size: 1.97vw;
             letter-spacing: 0.21vw;
           }
           .circles {
@@ -1220,11 +1223,9 @@
               height: 32.14vw;
               width: 3.65vw;
               flex: 0 0 3.65vw;
-              background-position: 1px -1.04vw;
+              background-position: 0px -1.04vw;
               background-size: 3.65vw 5.63vw;
-              @include mobile() {
-                background-position: 1px -3vw;
-              }
+             
             }
           }
 
@@ -1250,7 +1251,7 @@
     h2 {
       font-size: 4.22vw;
       line-height: 4.06vw;
-      -webkit-text-stroke-width: 0.1vw;
+      -webkit-text-stroke-width: 1px;
       letter-spacing: 0.16vw;
     }
     .team-list {
@@ -1305,14 +1306,14 @@
       font-size: 9.06vw;
       line-height: 8.7vw;
       letter-spacing: 0.26vw;
-      -webkit-text-stroke-width: 0.1vw;
+      -webkit-text-stroke-width: 1px;
       top: 16.93vw;
       left: -2.08vw;
     }
     h3 {
       font-size: 5vw;
       line-height: 5.1vw;
-      -webkit-text-stroke-width: 0.1vw;
+      -webkit-text-stroke-width: 1px;
       letter-spacing: 0.16vw;
     }
 

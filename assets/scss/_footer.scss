@@ -32,7 +32,7 @@ footer {
     font-family: $font;
     font-weight: 900;
     -webkit-text-stroke-color: #fff;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     color: transparent;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -131,7 +131,7 @@ footer {
     h2 {
       font-size: 5vw;
       line-height: 4.79vw;
-      -webkit-text-stroke-width: 0.1vw;
+      -webkit-text-stroke-width: 1px;
       letter-spacing: 0.16vw;
       top: -0.78vw;
     }

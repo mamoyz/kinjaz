@@ -20,7 +20,7 @@
     white-space: nowrap;
     letter-spacing: 5px;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
     transform: rotate(-180deg);
     z-index: 5;
@@ -91,7 +91,7 @@
     font-family: $font;
     font-weight: 900;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
     font-size: 100px;
     margin: 40px 0 65px;
@@ -210,9 +210,11 @@
       .item-content {
         padding-top: 98px;
         padding-right: 40px;
+        width: 561px;
         @include mobile() {
           padding-top: 25vw;
           padding-right: 11vw;
+          width: 100%;
         }
       }
       .item-img {
@@ -440,7 +442,7 @@
       font-size: 9.06vw;
       line-height: 8.7vw;
       letter-spacing: 0.26vw;
-      -webkit-text-stroke-width: 0.1vw;
+      -webkit-text-stroke-width: 1px;
       top: 17.34vw;
       left: 5.42vw;
     }
@@ -457,7 +459,7 @@
       transform: translate(0, 1.56vw);
     }
     h1 {
-      -webkit-text-stroke-width: 0.1vw;
+      -webkit-text-stroke-width: 1px;
       font-size: 5.21vw;
       margin: 2.08vw 0 3.39vw;
     }
@@ -495,6 +497,7 @@
         .item-content {
           padding-top: 5.1vw;
           padding-right: 2.08vw;
+          width: 29.22vw;
         }
         .item-img {
           img {
